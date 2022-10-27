@@ -28,9 +28,9 @@ resource "aws_key_pair" "key" {
   public_key = tls_private_key.tls_key.public_key_openssh
   
   # Save private key to local computer
-  provisioner "local-exec" {
+  /*provisioner "local-exec" {
     command = "echo '${tls_private_key.tls_key.private_key_pem}' > ~/workshop-key.pem; chmod 600 ~/workshop-key.pem"
-  }
+  }*/
 }
 
 # Find the latest "Ubuntu 20.04 Server" image
