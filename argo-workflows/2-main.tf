@@ -29,7 +29,7 @@ resource "aws_key_pair" "key" {
   
   # Save private key to local computer
   provisioner "local-exec" {
-    command = "echo '${tls_private_key.tls_key.private_key_pem}' > ~/workshop-key.pem; chmod 600 ~/.ssh/workshop-key.pem"
+    command = "echo '${tls_private_key.tls_key.private_key_pem}' > ~/workshop-key.pem; chmod 600 ~/workshop-key.pem"
   }
 }
 
